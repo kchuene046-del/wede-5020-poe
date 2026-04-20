@@ -24,7 +24,7 @@ Week 6 (5-10 April): Launch Week
 
 ## Sitemap
 
-![alet text Screenshoort](2026-04-20 163015.png)
+![Site structure diagram](./Screenshot%202026-04-20%20163015.png)
 
 ## References
 
