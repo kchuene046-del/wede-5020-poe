@@ -11,6 +11,7 @@ This project follows Semantic Versioning.
 - Added a logo and the slogo of the business on the nevigation bar
 - Added colour to the headers and fonts 
 - Added a background coloer
+- Added the team members 
 ### Changed
 - Moved paragraphs to the center of the page 
 - Moved the information on the foorter to center 
@@ -23,7 +24,6 @@ This project follows Semantic Versioning.
 - The price list and products description 
 - Moved my images to the center 
 - Contact information has more option 
-
 ## Semantic Versioning
 
 Format: align:center  
