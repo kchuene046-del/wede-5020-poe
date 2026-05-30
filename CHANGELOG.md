@@ -6,17 +6,27 @@ This project follows Semantic Versioning.
 
 ## [1.0.0] 
 ### Added
-- xyz
-
+- Added colour on the navigation bar 
+- Added boxes for the products and its prices 
+- Added a logo and the slogo of the business on the nevigation bar
+- Added colour to the headers and fonts 
+- Added a background coloer
 ### Changed
-- xyz
+- Moved paragraphs to the center of the page 
+- Moved the information on the foorter to center 
+- Decreased the image size and moved it to the center
+- Enquire pages made it into a survey page  
 
 ### Fixed
-- xyz
+- The navigation bar which is now vistable on each page 
+- The footer buy adding locatoin map of the backery 
+- The price list and products description 
+- Moved my images to the center 
+- Contact information has more option 
 
 ## Semantic Versioning
 
-Format: MAJOR.MINOR.PATCH  
+Format: align:center  
 Example: 2.1.3
 
 - MAJOR → Breaking changes (1.0.0 → 2.0.0)  

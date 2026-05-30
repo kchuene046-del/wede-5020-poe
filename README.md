@@ -17,7 +17,7 @@ the main goal of the websitr is to increase online visibility and attract more c
 ## Timeline and Milestones
 Week 1 (1-7 March): Planning and research 
 Week 2 (8-14 March): Branding and Design
-Week 3 (15-21 March): Website Development
+Week 3 (15-21 March): Website Development  
 Week 4 (22-28 March): Testing and Improvement
 Week 5 (29 March- 4 April): Marketing Preparation
 Week 6 (5-10 April): Launch Week 
