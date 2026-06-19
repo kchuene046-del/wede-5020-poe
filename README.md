@@ -7,12 +7,11 @@ Buttercup Bakes
 
 ## Project Overview
 
-The mission is to provide high quality and afforable baked goods for all occasion.
-The vision is to become a well known local bakery brand.
+The mission is to provide high quality, homemade treats using techniques. We spread happiness one bite ar a time and make sure every customer feels pecial. The vision is to become the go to destination for homemade treats in our community. We aim to create a worm welcoming enviroment and expand to cater to all dietary preferences bring joy and comfort through every bite.
 
 ## Website Goals and Objectives
 
-the main goal of the websitr is to increase online visibility and attract more customers.
+The main goal for the website is to promote the bakery, attracts customers and increase sales by providing information about product and services online. 
 
 ## Timeline and Milestones
 Week 1 (1-7 March): Planning and research 

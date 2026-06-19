@@ -2,106 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buttercup Bakes | Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#FFFBF5;">
+<body>
 
-    <header style="background:#FFFFFF; padding:15px 40px; border-bottom:2px solid #FFE0D0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
-        <div style="display:flex; align-items:center; gap:15px;">
-            <img src="images/logo.png" alt="Logo" width="60" height="60" style="border-radius:50%;" onerror="this.src='https://placehold.co/60x60/FDCBB2/A0522D?text=🧁'">
-            <div>
-                <h1 style="color:#A0522D; margin:0;">Buttercup Bakes</h1>
-                <p style="margin:0; color:#C47E5A;">fresh menu · student prices</p>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/logo.png" alt="Logo" class="logo-img" onerror="this.src='https://placehold.co/60x60/FDCBB2/A0522D?text=🧁'">
+                <div class="logo-text">
+                    <h1>Buttercup Bakes</h1>
+                    <p>fresh menu · student prices</p>
+                </div>
             </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html">Contact</a>
+                <button class="cart-icon-btn" onclick="openCartDrawer()">
+                    🛒
+                    <span class="cart-count">0</span>
+                </button>
+            </nav>
         </div>
-        <nav>
-            <a href="index.html" style="margin:0 12px; color:#7B3F1A; text-decoration:none;">Home</a>
-            <a href="about.html" style="margin:0 12px; color:#7B3F1A; text-decoration:none;">About</a>
-            <a href="products.html" style="margin:0 12px; color:#7B3F1A; font-weight:bold; text-decoration:none;">Products</a>
-            <a href="enquiry.html" style="margin:0 12px; color:#7B3F1A; text-decoration:none;">Enquiry</a>
-            <a href="contact.html" style="margin:0 12px; color:#7B3F1A; text-decoration:none;">Contact</a>
-        </nav>      
     </header>
 
     <main>
-        <div style="text-align:center; padding:30px;">
-            <h1 style="color:#B45F2B;">🍪 Our Delicious Menu 🍰</h1>
+        <div class="text-center" style="padding: 40px 20px 20px;">
+            <h1>🍪 Our Delicious Menu 🍰</h1>
             <p>✨ homemade · fresh daily · student budget friendly ✨</p>
         </div>
 
-        <div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap; max-width:1200px; margin:auto; padding:20px;">
-            <div style="background:#FFF3ED; border-radius:30px; padding:20px; width:240px; text-align:center;">
-                <img src="images/products/scones.jpeg" width="200" height="160" style="border-radius:20px;" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Scones'">
+        <div class="products-grid" style="max-width: 1300px; margin: auto; padding: 20px;">
+            
+            <!-- Product 1: Scones -->
+            <div class="product-card">
+                <img src="images/products/scones.jpeg" alt="Scones" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Scones'">
                 <h3>🧈 Buttery Scones</h3>
                 <p>Flaky, golden & served with jam</p>
-                <p><b>R25 each</b> | 4 for R85</p>
-                <button style="background:#FFB6C1; padding:8px 20px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Order Online</button>
+                <div class="product-price">R25 each | 4 for R85</div>
+                <button class="add-to-cart-btn" data-name="🧈 Buttery Scones" data-price="25">🛒 Add to Cart</button>
             </div>
-            <div style="background:#FFF3ED; border-radius:30px; padding:20px; width:240px; text-align:center;">
-                <img src="images/products/cake1.jpeg" width="200" height="160" style="border-radius:20px;" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Cakes'">
+            
+            <!-- Product 2: Celebration Cakes - CUSTOMIZABLE -->
+            <div class="product-card">
+                <img src="images/products/cake1.jpeg" alt="Celebration Cakes" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Celebration+Cakes'">
                 <h3>🎂 Celebration Cakes</h3>
                 <p>Vanilla / Chocolate / Red velvet</p>
-                <p><b>From R1000 (6 inch)</b></p>
-                <button style="background:#FFB6C1; padding:8px 20px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Order Online</button>
+                <div class="product-price">R1000 (6 inch)</div>
+                <button class="customize-cake-btn" data-cake-type="celebration" data-base-price="1000">🎨 Customize & Add</button>
             </div>
-            <div style="background:#FFF3ED; border-radius:30px; padding:20px; width:240px; text-align:center;">
-                <img src="images/products/cupcakes.jpeg" width="200" height="160" style="border-radius:20px;" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Cupcakes'">
+            
+            <!-- Product 3: Cupcakes -->
+            <div class="product-card">
+                <img src="images/products/cupcakes.jpeg" alt="Cupcakes" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Cupcakes'">
                 <h3>🧁 Cupcakes</h3>
                 <p>Buttercream dream • sprinkles</p>
-                <p><b>R18 each</b> | Box of 6: R95</p>
-                <button style="background:#FFB6C1; padding:8px 20px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Order Online</button>
+                <div class="product-price">R18 each | Box of 6: R95</div>
+                <button class="add-to-cart-btn" data-name="🧁 Cupcakes" data-price="18">🛒 Add to Cart</button>
             </div>
-            <div style="background:#FFF3ED; border-radius:30px; padding:20px; width:240px; text-align:center;">
-                <img src="images/products/desserts.jpeg" width="200" height="160" style="border-radius:20px;" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Desserts'">
+            
+            <!-- Product 4: Dessert Jars -->
+            <div class="product-card">
+                <img src="images/products/desserts.jpeg" alt="Dessert Jars" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Desserts'">
                 <h3>🍨 Dessert Jars</h3>
                 <p>Tiramisu / Lemon & berry</p>
-                <p><b>R45 per jar</b></p>
-                <button style="background:#FFB6C1; padding:8px 20px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Order Online</button>
+                <div class="product-price">R45 per jar</div>
+                <button class="add-to-cart-btn" data-name="🍨 Dessert Jars" data-price="45">🛒 Add to Cart</button>
             </div>
-            <div style="background:#FFF3ED; border-radius:30px; padding:20px; width:240px; text-align:center;">
-                <img src="images/products/cakes.jpeg" width="200" height="160" style="border-radius:20px;" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Custom+Cakes'">
+            
+            <!-- Product 5: Custom Cakes - CUSTOMIZABLE -->
+            <div class="product-card">
+                <img src="images/products/cakes.jpeg" alt="Custom Cakes" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Custom+Cakes'">
                 <h3>🎨 Custom Cakes</h3>
                 <p>Birthday · Wedding · Any theme</p>
-                <p><b>From R800</b> (design quote)</p>
-                <button style="background:#FFB6C1; padding:8px 20px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Order Online</button>
+                <div class="product-price">From R800</div>
+                <button class="customize-cake-btn" data-cake-type="custom" data-base-price="800">🎨 Design Your Cake</button>
             </div>
-            <div style="background:#FFF3ED; border-radius:30px; padding:20px; width:240px; text-align:center;">
-                <img src="images/products/cookies.jpeg" width="200" height="160" style="border-radius:20px;" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Cookies'">
+            
+            <!-- Product 6: Chunk Cookies -->
+            <div class="product-card">
+                <img src="images/products/cookies.jpeg" alt="Cookies" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Cookies'">
                 <h3>🍪 Chunk Cookies</h3>
                 <p>Double choc / White choc macadamia</p>
-                <p><b>R15 each</b> | Box of 12: R150</p>
-                <button style="background:#FFB6C1; padding:8px 20px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Order Online</button>
+                <div class="product-price">R15 each | Box of 12: R150</div>
+                <button class="add-to-cart-btn" data-name="🍪 Chunk Cookies" data-price="15">🛒 Add to Cart</button>
             </div>
-            <div style="background:#FFF3ED; border-radius:30px; padding:20px; width:240px; text-align:center;">
-                <img src="images/products/cronuts.jpeg" width="200" height="160" style="border-radius:20px;" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Cronuts'">
+            
+            <!-- Product 7: Cronuts -->
+            <div class="product-card">
+                <img src="images/products/cronuts.jpeg" alt="Cronuts" onerror="this.src='https://placehold.co/200x160/FFE0D0/A0522D?text=Cronuts'">
                 <h3>🥐 Cronuts</h3>
                 <p>Croissant + donut magic</p>
-                <p><b>R35 each</b></p>
-                <button style="background:#FFB6C1; padding:8px 20px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Order Online</button>
+                <div class="product-price">R35 each</div>
+                <button class="add-to-cart-btn" data-name="🥐 Cronuts" data-price="35">🛒 Add to Cart</button>
             </div>
-            <div style="background:#FFE8E0; border-radius:30px; padding:20px; width:240px; text-align:center;">
+            
+            <!-- Product 8: Student Combo -->
+            <div class="product-card" style="background: #FFE8E0;">
                 <h3>🎁 Student Combo 🎁</h3>
                 <p>2 cupcakes + 1 cookie + 1 scone</p>
-                <p><b>R55 only!</b></p>
-                <button style="background:#FFB6C1; padding:10px 30px; border-radius:40px; border:none; cursor:pointer;" onclick="location.href='enquiry.html'">🛒 Grab Deal</button>
+                <div class="product-price">R55 only!</div>
+                <button class="add-to-cart-btn" data-name="🎁 Student Combo" data-price="55">🛒 Add to Cart</button>
             </div>
         </div>
     </main>
 
-    <footer style="background:#FCE4D6; text-align:center; padding:30px;">
+    <footer>
         <h3>Follow Us</h3>
-        <div class="social-icons" style="display:flex; justify-content:center; gap:20px; margin:15px 0;">
-            <a href="#" target="_blank" style="background:#A0522D; color:white; width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:20px; text-decoration:none;"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank" style="background:#E4405F; color:white; width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:20px; text-decoration:none;"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" style="background:#000000; color:white; width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:20px; text-decoration:none;"><i class="fab fa-tiktok"></i></a>
-            <a href="#" target="_blank" style="background:#25D366; color:white; width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:20px; text-decoration:none;"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" target="_blank" style="background:#1DA1F2; color:white; width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:20px; text-decoration:none;"><i class="fab fa-twitter"></i></a>
+        <div class="social-icons">
+            <a href="https://facebook.com/buttercupbakes" target="_blank" class="social-icon social-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/buttercupbakes" target="_blank" class="social-icon social-ig"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@buttercupbakes" target="_blank" class="social-icon social-tt"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/27761234567?text=Hello%20Buttercup%20Bakes!" target="_blank" class="social-icon social-wa"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://twitter.com/buttercupbakes" target="_blank" class="social-icon social-tw"><i class="fab fa-twitter"></i></a>
         </div>
-        <p>Buttercup Bakes- where treats feel like home @ buttercupbakes.co.za</p>
+        <p>Buttercup Bakes - where treats feel like home @ buttercupbakes.co.za</p>
         <p>Serving Johannesburg and students with affordable prices and comforting bakes</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
