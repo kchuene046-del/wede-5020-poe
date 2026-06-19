@@ -12,6 +12,7 @@ This project follows Semantic Versioning.
 - Added colour to the headers and fonts 
 - Added a background coloer
 - Added the team members 
+- JavaScript to all the additions
 ### Changed
 - Moved paragraphs to the center of the page 
 - Moved the information on the foorter to center 
